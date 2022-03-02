@@ -5,7 +5,7 @@ from application.forms import SongInfo
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
-    return render_template('home.html')
+    return render_template('test.html')
 
 @app.route('/song', methods=['GET', 'POST'])
 def song():
