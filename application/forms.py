@@ -4,4 +4,4 @@ from wtforms import StringField, SubmitField
 class SongInfo(FlaskForm):
     artist = StringField('Artist')
     title = StringField('Track Title')
-    submit = SubmitField('Add Name')
+    submit = SubmitField('Add Song')

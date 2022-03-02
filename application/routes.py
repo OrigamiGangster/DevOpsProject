@@ -7,7 +7,7 @@ from application.forms import SongInfo
 def home():
     return render_template('home.html')
 
-@app.route('/song', methods=['GET', 'POST'])
+@app.route('/add_song', methods=['GET', 'POST'])
 def song():
     message = ""
     form = SongInfo()
