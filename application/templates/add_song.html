@@ -1,19 +1,36 @@
 {% extends 'base.html' %}
 
 {% block head %}
+
 <h1>Add Song</h1>
+
 {% endblock %}
 
-
 {% block body %}
+
 <body>
     <div class='form'>
         <form method='POST' action=''>
             {{ form.hidden_tag() }}
-            {{ form.artist.label }} {{ form.artist }}
-            {{ form.title.label }} {{ form.title }}
-            <br>
-            {{ form.submit }}
+
+            <table>
+                <tr>
+                    <th>{{ form.artist.label }}</th>
+                    <th>{{ form.title.label }}</th>
+                    <th>Submit</th>
+                    <th>ACTIONS</th>
+                </tr>
+                <tr>
+                    <td>{{ form.artist }}</td>
+                    <td>{{ form.title }}</td>
+                    <td>{{ form.submit }}</td>
+                    <td>
+                        <a href="">Update</a>
+                        <br>
+                        <a href="">Delete</a>
+                    </td>
+                </tr>
+            </table>
             <br>
         {{ message }}
         </form>
