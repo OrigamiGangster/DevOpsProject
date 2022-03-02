@@ -4,8 +4,11 @@ from application.models import SongInfo
 from application.forms import SongInfo
 
 @app.route('/', methods=['GET', 'POST'])
-@app.route('/home', methods=['GET', 'POST'])
 def home():
+    return render_template('home.html')
+
+@app.route('/song', methods=['GET', 'POST'])
+def song():
     message = ""
     form = SongInfo()
 
@@ -18,4 +21,4 @@ def home():
         else:
             message = f'Wow, {title} by {artist} is a Banger'
 
-    return render_template('home.html', form=form, message=message)
+    return render_template('add_song.html', form=form, message=message)
